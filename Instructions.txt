@@ -1,0 +1,12 @@
+Requires Java and Ant
+
+Tested on April 21st, 2015
+on access.cims.nyu.edu energon1 server with
+Java Version "1.7.0_75"
+Apache Ant version 1.7.1 compiled on April 26 2010
+
+1. Extract SourceCode.zip
+2. Navigate to directory "RSACryptosystem"
+3. Run command "ant"
+
+Compiled jar is located in the "dist" folder

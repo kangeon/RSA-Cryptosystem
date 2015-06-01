@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ====================================================================== 
+
+     April 21, 2015 9:35:33 PM                                                        
+
+     RSA Cryptosystem 
+     NYU Applied Cryptography Spring 2015 
+     Final Project
+     
+     Geon Kang                                                              
+
+     ====================================================================== -->
+
+<project name="RSACryptosystem" default="run">
+
+    <description>
+
+        RSA Cryptosystem
+        NYU Applied Cryptography Spring 2015 
+        Final Project
+
+    </description>
+
+  <!-- ================================= 
+
+		  target: init              
+
+	   ================================= -->
+
+
+  <target name="init">
+
+      <property name="build" location="bin"/>
+
+      <property name="src" location="src"/>
+  	
+      <property name="dist" location="dist"/>
+
+      <tstamp/>
+
+  </target>
+
+
+  <!-- ================================= 
+
+          target: clean              
+
+         ================================= -->
+
+    <target name="clean" depends="init" description="Cleans the project.">
+
+      <delete dir="${build}" />
+
+      <delete dir="${dist}" />
+
+    </target>
+
+
+
+    <!-- ================================= 
+
+          target: compile              
+
+         ================================= -->
+
+    <target name="compile" depends="init" description="Compile the project.">
+
+    <mkdir dir="${build}" />  
+
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="false"/>
+    	
+    </target>
+
+
+
+    <!-- ================================= 
+
+          target: dist              
+
+         ================================= -->
+
+    <target name="dist" depends="compile" description="Creates runnable jar file.">
+
+      <mkdir dir="${dist}" />  
+
+    <jar jarfile="${dist}/[gk698]RSA-${DSTAMP}.jar" basedir="${build}">
+    	
+		<manifest>
+			
+			<attribute name="Main-Class" value="edu.nyu.gk698.crypt.rsa.Driver"/>    	
+		
+		</manifest>
+    
+    </jar>
+    	
+    </target>
+
+  <!-- ================================= 
+
+	          target: run              
+
+	   ================================= -->
+	
+    <target name="run" depends="dist">
+    	
+        <java jar="${dist}/[gk698]RSA-${DSTAMP}.jar" fork="true"/>
+
+    </target>
+
+</project>

@@ -1,0 +1,114 @@
+Buildfile: build.xml
+
+init:
+
+compile:
+
+dist:
+
+run:
+     [java] Building RSA System
+     [java] Generating keypair for Alice
+     [java] Trace for Alice's keypair:
+     [java] ==============================Line 104==============================
+     [java] Random number #1 is: 703110546
+     [java] Random number #1 in binary format is: 00101001111010001001110110010010
+     [java] Extracted bit for random number #1 is: 0
+     [java] Random number #2 is: 1460104490
+     [java] Random number #2 in binary format is: 01010111000001110110110100101010
+     [java] Extracted bit for random number #2 is: 0
+     [java] Random number #3 is: 1313375950
+     [java] Random number #3 in binary format is: 01001110010010001000011011001110
+     [java] Extracted bit for random number #3 is: 0
+     [java] Random number #4 is: 751290346
+     [java] Random number #4 in binary format is: 00101100110001111100011111101010
+     [java] Extracted bit for random number #4 is: 0
+     [java] Random number #5 is: 468834695
+     [java] Random number #5 in binary format is: 00011011111100011101100110000111
+     [java] Extracted bit for random number #5 is: 1
+     [java] Prime candidate generated is: 67
+     [java] Prime candidate in binary format is: 00000000000000000000000001000011
+     [java] ==============================Line 119==============================
+     [java] 75 was not prime for a = 42
+     [java] Trace of prime candidate n = 75 with a = 42
+     [java] z = 1 | y = 1 | bit of x6 = 1 | y2 = 42
+     [java] z = 42 | y = 39 | bit of x5 = 0 | y2 = 21
+     [java] z = 39 | y = 21 | bit of x4 = 0 | y2 = 66
+     [java] z = 21 | y = 66 | bit of x3 = 1 | y2 = 72
+     [java] z = 72 | y = 9 | bit of x2 = 0 | y2 = 6
+     [java] z = 9 | y = 6 | bit of x1 = 1 | y2 = 27
+     [java] z = 27 | y = 54 | bit of x0 = 0 | y2 = 66
+     [java] 75 is not prime: bad final value
+     [java] ==============================Line 123==============================
+     [java] 113 is perhaps prime. One value of a used to test is a = 58
+     [java] Trace of prime candidate n = 113 with a = 58
+     [java] z = 1 | y = 1 | bit of x6 = 1 | y2 = 58
+     [java] z = 58 | y = 87 | bit of x5 = 1 | y2 = 74
+     [java] z = 74 | y = 52 | bit of x4 = 1 | y2 = 78
+     [java] z = 78 | y = 95 | bit of x3 = 0 | y2 = 98
+     [java] z = 95 | y = 98 | bit of x2 = 0 | y2 = 112
+     [java] z = 98 | y = 112 | bit of x1 = 0 | y2 = 1
+     [java] z = 112 | y = 1 | bit of x0 = 0 | y2 = 1
+     [java] ==============================Line 142==============================
+     [java] Trace for e = 3
+     [java] q = 3061 | r1 = 9184 | r2 = 3 | r3 = 1 | s = 1 | t = 0
+     [java] q = 3 | r1 = 3 | r2 = 1 | r3 = 0 | s = 0 | t = 1
+     [java] q =  | r1 = 1 | r2 = 0 | r3 =  | s = 1 | t = -3061
+     [java] multiplicative inverse for 3 mod 9184 (e mod n) is 6123
+     [java] ==============================Line 152==============================
+     [java] Value of d: 6123
+     [java] ==============================Line 156==============================
+     [java] integer value of p: 113
+     [java] bit representation of p: 00000000000000000000000001110001
+     [java] integer value of q: 83
+     [java] bit representation of q: 00000000000000000000000001010011
+     [java] integer value of n: 9379
+     [java] bit representation of n: 00000000000000000010010010100011
+     [java] integer value of e: 3
+     [java] bit representation e: 00000000000000000000000000000011
+     [java] integer value of d: 6123
+     [java] bit representation of d: 00000000000000000001011111101011
+     [java] 
+     [java] Creating digital certificate for Alice
+     [java] Generating keypair for Trent
+     [java] Generating certificate for Alice signed by Trent
+     [java] ==============================Line 185==============================
+     [java] r as sequence of bits: 0010000001000001011011000110100101100011011001010000000000000000001001001010001100000000000000000000000000000011
+     [java] h(r) as sequence of bits: 00000000000000000000000011100110
+     [java] s as sequence of bits: 00000000000000000000100110110000
+     [java] ==============================Line 187==============================
+     [java] h(r) as integer: 230
+     [java] s as integer: 2480
+     [java] 4107 6319
+     [java] Alice authenticates herself to Bob
+     [java] Bob picks random u
+     [java] ==============================Line 206==============================
+     [java] k as integer: 13
+     [java] u as integer: 7128
+     [java] ==============================Line 208==============================
+     [java] u as sequence of bits: 00000000000000000001101111011000
+     [java] Bob sends u to Alice
+     [java] Alice computes h(u)
+     [java] ==============================Line 215==============================
+     [java] u as integer: 7128
+     [java] u as sequence of bits: 00000000000000000001101111011000
+     [java] h(u) as integer: 195
+     [java] h(u) as sequence of bits: 00000000000000000000000011000011
+     [java] Alice decrypts h(u) with her private key to get v
+     [java] v as integer: 7320
+     [java] v as sequence of bits: 00000000000000000001110010011000
+     [java] Alice sends v to Bob
+     [java] Bob encrypts v with Alice's public key
+     [java] E(e, v) as integer: 195
+     [java] E(e, v) as sequence of bits: 00000000000000000000000011000011
+     [java] ==============================Line 219==============================
+     [java] Trace for E(e, v)
+     [java] e = 3
+     [java] v = 7320
+     [java] n = 9379
+     [java] Using fast exponentiation to calculate 7320^3 % 9379
+     [java] y = 1 | bit of x1 = 1 | y2 = 7320
+     [java] y = 173 | bit of x0 = 1 | y2 = 195
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
